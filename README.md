@@ -59,13 +59,13 @@ const lruInstance = new LRUCache<string, CacheEntry>({ max: 1000 });
 
 const lru: Cache = {
   set(key, value) {
-    return lruCacheInstance.set(key, value);
+    return lruInstance.set(key, value);
   },
   get(key) {
-    return lruCacheInstance.get(key);
+    return lruInstance.get(key);
   },
   delete(key) {
-    return lruCacheInstance.delete(key);
+    return lruInstance.delete(key);
   },
 };
 
