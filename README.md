@@ -58,6 +58,7 @@ import { cachified, CacheEntry, Cache } from '@epic-web/cachified';
 const lruInstance = new LRUCache<string, CacheEntry>({ max: 1000 });
 
 const lru: Cache = {
+  /* Note that value here exposes metadata that includes things such as ttl and createdTime */
   set(key, value) {
     return lruInstance.set(key, value);
   },
